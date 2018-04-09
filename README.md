@@ -4,7 +4,7 @@ A [Buildkite plugin](https://buildkite.com/docs/agent/v3/plugins) to lint your B
 
 ## Usage
 
-```
+```yaml
 steps:
   - label: lint
     plugins:
