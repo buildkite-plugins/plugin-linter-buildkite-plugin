@@ -8,9 +8,11 @@ A [Buildkite plugin](https://buildkite.com/docs/agent/v3/plugins) to lint your B
 steps:
   - label: lint
     plugins:
-      plugin-linter#1.0.0:
+      plugin-linter#v1.0.0:
         name: my-plugin
 ```
+
+If you want to run it locally on a command line, see the [linter documentation](https://github.com/buildkite-plugins/buildkite-plugin-linter).
 
 ## Configuration
 
