@@ -1,0 +1,5 @@
+steps:
+  - label: lint
+    plugins:
+      plugin-linter#$BUILDKITE_COMMIT:
+        name: plugin-linter
