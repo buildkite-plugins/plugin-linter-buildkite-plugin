@@ -1,6 +1,6 @@
 # Plugin Linter Buildkite Plugin
 
-A [Buildkite plugin](https://buildkite.com/docs/agent/v3/plugins) to lint your Buildkite plugins, using the [Buildkite Plugin Linter](https://github.com/buildkite-plugins/buildkite-plugin-linter) 😱
+A [Buildkite plugin](https://buildkite.com/docs/agent/v3/plugins) to lint your Buildkite plugins 😱
 
 ## Usage
 
@@ -12,7 +12,7 @@ steps:
         name: my-plugin
 ```
 
-If you want to run it locally on a command line, see the [linter documentation](https://github.com/buildkite-plugins/buildkite-plugin-linter).
+If you want to run it locally on a command line, see the [Plugin Linter tool documentation](https://github.com/buildkite-plugins/buildkite-plugin-linter).
 
 ## Configuration
 
