@@ -6,7 +6,7 @@ echo "--- :docker: Fetching the latest buildkite/plugin-linter"
 
 docker pull buildkite/plugin-linter
 
-echo "++++ Linting"
+echo "+++ Linting"
 
 args=(
   "-it"
