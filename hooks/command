@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -euo pipefail
+
+echo "--- :docker: Fetching the latest buildkite/plugin-linter"
+
+docker pull buildkite/plugin-linter
+
+echo "++++ Linting"
+
+args=(
+  "-it"
+  "--rm"
+  "--volume" "$PWD:/plugin:ro"
+  "--env"    "PLUGIN_NAME=$BUILDKITE_PLUGIN_PLUGIN_LINTER_NAME"
+)
+
+if [[ -n "${BUILDKITE_PLUGIN_PLUGIN_LINTER_README:-}" ]] ; then
+  args+=("--env" "PLUGIN_README=$BUILDKITE_PLUGIN_PLUGIN_LINTER_README")
+fi
+
+docker run "${args[@]}" buildkite/plugin-linter
