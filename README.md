@@ -6,7 +6,7 @@ A [Buildkite plugin](https://buildkite.com/docs/agent/v3/plugins) to lint your B
 
 ```yaml
 steps:
-  - label: lint
+  - label: ":sparkles: Lint"
     plugins:
       plugin-linter#v1.0.0:
         name: my-plugin

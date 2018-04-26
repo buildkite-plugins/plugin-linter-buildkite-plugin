@@ -1,5 +1,15 @@
 steps:
-  - label: lint
+  - label: ":sparkles: Lint"
     plugins:
       $BUILDKITE_REPO#$BUILDKITE_COMMIT:
         name: plugin-linter
+
+  - label: ":bash: Shellcheck"
+    plugins:
+      shellcheck#v1.0.1:
+        files: hooks/**
+
+  - label: ":bash: Tests"
+    plugins:
+      docker-compose#v2.1.0:
+        run: tests
