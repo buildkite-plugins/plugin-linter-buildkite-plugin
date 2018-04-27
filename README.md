@@ -2,6 +2,8 @@
 
 A [Buildkite plugin](https://buildkite.com/docs/agent/v3/plugins) to lint your Buildkite plugins 😱
 
+For a full list of features see the [Buildkite Plugin Linter cli tool documentation](https://github.com/buildkite-plugins/buildkite-plugin-linter).
+
 ## Usage
 
 ```yaml
@@ -12,7 +14,9 @@ steps:
         name: my-plugin
 ```
 
-If you want to run it locally on a command line, see the [Plugin Linter tool documentation](https://github.com/buildkite-plugins/buildkite-plugin-linter).
+Note: this will pull the latest version of the Plugin Linter each time it is run.
+
+If you want to run it locally on a command line, see the [Buildkite Plugin Linter cli tool documentation](https://github.com/buildkite-plugins/buildkite-plugin-linter).
 
 ## Configuration
 
