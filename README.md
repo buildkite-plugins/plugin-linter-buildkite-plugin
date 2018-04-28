@@ -11,7 +11,7 @@ steps:
   - label: ":sparkles: Lint"
     plugins:
       plugin-linter#v1.0.0:
-        name: my-plugin
+        name: my-org/my-plugin
 ```
 
 Note: this will pull the latest version of the Plugin Linter each time it is run.
