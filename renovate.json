@@ -4,5 +4,8 @@
   ],
   "buildkite": {
     "enabled": true
+  },
+  "docker-compose": {
+    "pinDigests": false
   }
 }
