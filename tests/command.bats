@@ -6,11 +6,11 @@ load '/usr/local/lib/bats/load.bash'
 # export DOCKER_STUB_DEBUG=/dev/tty
 
 @test "Runs the linter via Docker" {
-  export BUILDKITE_PLUGIN_PLUGIN_LINTER_NAME=my-plugin
+  export BUILDKITE_PLUGIN_PLUGIN_LINTER_ID=my-plugin
 
   stub docker \
     "pull buildkite/plugin-linter : echo pulled image" \
-    "run -it --rm --volume /plugin:/plugin:ro --env PLUGIN_NAME=my-plugin buildkite/plugin-linter : echo linted"
+    "run -it --rm --volume /plugin:/plugin:ro --env PLUGIN_ID=my-plugin buildkite/plugin-linter : echo linted"
 
   run $PWD/hooks/command
 
@@ -21,12 +21,12 @@ load '/usr/local/lib/bats/load.bash'
 }
 
 @test "Supports the readme option" {
-  export BUILDKITE_PLUGIN_PLUGIN_LINTER_NAME=my-plugin
+  export BUILDKITE_PLUGIN_PLUGIN_LINTER_ID=my-plugin
   export BUILDKITE_PLUGIN_PLUGIN_LINTER_README=some-readme.yml
 
   stub docker \
     "pull buildkite/plugin-linter : echo pulled image" \
-    "run -it --rm --volume /plugin:/plugin:ro --env PLUGIN_NAME=my-plugin --env PLUGIN_README=some-readme.yml buildkite/plugin-linter : echo linted"
+    "run -it --rm --volume /plugin:/plugin:ro --env PLUGIN_ID=my-plugin --env PLUGIN_README=some-readme.yml buildkite/plugin-linter : echo linted"
 
   run $PWD/hooks/command
 

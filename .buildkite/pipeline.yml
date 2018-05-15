@@ -2,7 +2,7 @@ steps:
   - label: ":sparkles: Lint"
     plugins:
       $BUILDKITE_REPO#$BUILDKITE_COMMIT:
-        name: plugin-linter
+        id: plugin-linter
 
   - label: ":bash: Shellcheck"
     plugins:
