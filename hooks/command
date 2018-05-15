@@ -12,7 +12,7 @@ args=(
   "-it"
   "--rm"
   "--volume" "$PWD:/plugin:ro"
-  "--env"    "PLUGIN_NAME=$BUILDKITE_PLUGIN_PLUGIN_LINTER_NAME"
+  "--env"    "PLUGIN_ID=$BUILDKITE_PLUGIN_PLUGIN_LINTER_ID"
 )
 
 if [[ -n "${BUILDKITE_PLUGIN_PLUGIN_LINTER_README:-}" ]] ; then

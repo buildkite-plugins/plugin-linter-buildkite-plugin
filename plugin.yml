@@ -5,10 +5,10 @@ requirements:
   - docker
 configuration:
   properties:
-    name:
+    id:
       type: string
     readme:
       type: string
   required:
-    - name
+    - id
   additionalProperties: false

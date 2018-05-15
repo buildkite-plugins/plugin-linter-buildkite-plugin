@@ -11,7 +11,7 @@ steps:
   - label: ":sparkles: Lint"
     plugins:
       plugin-linter#v1.0.0:
-        name: my-org/my-plugin
+        id: my-org/my-plugin
 ```
 
 Note: this will pull the latest version of the Plugin Linter each time it is run.
@@ -20,9 +20,9 @@ If you want to run it locally on a command line, see the [Buildkite Plugin Linte
 
 ## Configuration
 
-### `name`
+### `id`
 
-The name of the plugin
+The id of the plugin (e.g. `my-org/my-plugin`)
 
 ### `readme` (optional)
 
