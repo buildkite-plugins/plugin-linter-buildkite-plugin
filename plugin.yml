@@ -1,4 +1,4 @@
-name: plugin-linter
+name: Plugin Linter
 description: A plugin to lint your Buildkite plugins
 author: "https://github.com/buildkite"
 requirements:
