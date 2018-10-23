@@ -10,8 +10,8 @@ For a full list of features see the [Buildkite Plugin Linter cli tool documentat
 steps:
   - label: ":sparkles: Lint"
     plugins:
-      plugin-linter#v2.0.0:
-        id: my-org/my-plugin
+      - plugin-linter#v2.0.0:
+          id: my-org/my-plugin
 ```
 
 Note: this will pull the latest version of the Plugin Linter each time it is run.
