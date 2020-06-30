@@ -1,4 +1,4 @@
-# Plugin Linter Buildkite Plugin ![Build status](https://badge.buildkite.com/6a0a80700a07fdead547632d8fdf57447bf1db7b25fa96aebf.svg?branch=master)
+# Plugin Linter Buildkite Plugin [![Build status](https://badge.buildkite.com/044827c84a7a6aa9d9b80ff3f1f7285189607fe0c39e17e8d6.svg?branch=master)](https://buildkite.com/buildkite/plugins-plugin-linter)
 
 A [Buildkite plugin](https://buildkite.com/docs/agent/v3/plugins) to lint your Buildkite plugins 😱
 
