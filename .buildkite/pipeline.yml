@@ -11,5 +11,5 @@ steps:
 
   - label: ":bash: Tests"
     plugins:
-      docker-compose#v3.12.0:
+      docker-compose#v4.4.0:
         run: tests
