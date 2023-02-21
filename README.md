@@ -10,7 +10,7 @@ For a full list of features see the [Buildkite Plugin Linter cli tool documentat
 steps:
   - label: ":sparkles: Lint"
     plugins:
-      - plugin-linter#v3.0.0:
+      - plugin-linter#v3.1.0:
           id: my-org/my-plugin
 ```
 
@@ -23,6 +23,10 @@ If you want to run it locally on a command line, see the [Buildkite Plugin Linte
 ### `id`
 
 The id of the plugin (e.g. `my-org/my-plugin`)
+
+### `image-version`
+
+The docker tag of the `buildkite/plugin-linter` image to use. Default is `2.0.1`
 
 ### `readme` (optional)
 
