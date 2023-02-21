@@ -2,6 +2,11 @@
 
 set -euo pipefail
 
+if [ -z "${BUILDKITE_PLUGIN_PLUGIN_LINTER_ID:-}" ]; then
+    echo ':boom: Missing id parameter in plugin configuration'
+    exit 1
+fi
+
 echo "--- :docker: Fetching the latest buildkite/plugin-linter"
 
 docker pull buildkite/plugin-linter
