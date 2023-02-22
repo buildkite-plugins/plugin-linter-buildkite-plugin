@@ -53,7 +53,7 @@ setup() {
 
   stub docker \
     "pull buildkite/plugin-linter : echo pulled image" \
-    "run -it --rm --volume /plugin:/plugin:ro --env PLUGIN_ID=my-plugin buildkite/plugin-linter:v2.0.1 : echo linted"
+    "run -it --rm --volume /plugin:/plugin:ro --env PLUGIN_ID=my-plugin buildkite/plugin-linter:v2.0.2 : echo linted"
 
   run "$PWD"/hooks/command
 
