@@ -11,7 +11,7 @@ TAG=${BUILDKITE_PLUGIN_PLUGIN_LINTER_IMAGE_VERSION:-v2.0.2}
 
 echo "--- :docker: Fetching buildkite/plugin-linter:${TAG}"
 
-docker pull buildkite/plugin-linter:${TAG}
+docker pull "buildkite/plugin-linter:${TAG}"
 
 echo "+++ Linting"
 
