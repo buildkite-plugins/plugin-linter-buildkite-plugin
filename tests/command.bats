@@ -22,7 +22,7 @@ setup() {
 
 @test "Runs the linter via Docker" {
   stub docker \
-    "pull buildkite/plugin-linter : echo pulled image" \
+    "pull buildkite/plugin-linter:latest : echo pulled image" \
     "run -it --rm --volume /plugin:/plugin:ro --env PLUGIN_ID=my-plugin buildkite/plugin-linter:latest : echo linted"
 
   run "$PWD"/hooks/command
@@ -37,7 +37,7 @@ setup() {
   export BUILDKITE_PLUGIN_PLUGIN_LINTER_README=some-readme.yml
 
   stub docker \
-    "pull buildkite/plugin-linter : echo pulled image" \
+    "pull buildkite/plugin-linter:latest : echo pulled image" \
     "run -it --rm --volume /plugin:/plugin:ro --env PLUGIN_ID=my-plugin --env PLUGIN_README=some-readme.yml buildkite/plugin-linter:latest : echo linted"
 
   run "$PWD"/hooks/command
@@ -52,7 +52,7 @@ setup() {
   unset BUILDKITE_PLUGIN_PLUGIN_LINTER_IMAGE_VERSION
 
   stub docker \
-    "pull buildkite/plugin-linter : echo pulled image" \
+    "pull buildkite/plugin-linter:v2.0.2 : echo pulled image" \
     "run -it --rm --volume /plugin:/plugin:ro --env PLUGIN_ID=my-plugin buildkite/plugin-linter:v2.0.2 : echo linted"
 
   run "$PWD"/hooks/command
