@@ -26,7 +26,7 @@ The id of the plugin (e.g. `my-org/my-plugin`)
 
 ### `image-version`
 
-The docker tag of the `buildkite/plugin-linter` image to use. Default is `2.0.2`
+The docker tag of the `buildkite/plugin-linter` image to use. Default is `2.0.3`
 
 ### `readme` (optional)
 
