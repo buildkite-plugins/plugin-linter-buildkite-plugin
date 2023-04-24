@@ -4,7 +4,7 @@ steps:
       - shellcheck#v1.3.0:
           files: hooks/**
 
-  - label: ":sparkles: Self-test"
+  - label: ":sparkles: Stable linting"
     plugins:
       - plugin-linter#v3.1.0:
           id: plugin-linter
