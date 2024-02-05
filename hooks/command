@@ -7,7 +7,7 @@ if [ -z "${BUILDKITE_PLUGIN_PLUGIN_LINTER_ID:-}" ]; then
     exit 1
 fi
 
-TAG=${BUILDKITE_PLUGIN_PLUGIN_LINTER_IMAGE_VERSION:-v2.0.4}
+TAG=${BUILDKITE_PLUGIN_PLUGIN_LINTER_IMAGE_VERSION:-v2.1.0}
 
 echo "--- :docker: Fetching buildkite/plugin-linter:${TAG}"
 
