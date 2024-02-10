@@ -11,6 +11,8 @@ configuration:
       type: string
     readme:
       type: string
+    skip-invalid:
+      type: boolean
   required:
     - id
   additionalProperties: false

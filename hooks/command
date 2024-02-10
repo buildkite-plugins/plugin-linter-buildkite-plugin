@@ -26,4 +26,8 @@ if [[ -n "${BUILDKITE_PLUGIN_PLUGIN_LINTER_README:-}" ]] ; then
   args+=("--env" "PLUGIN_README=$BUILDKITE_PLUGIN_PLUGIN_LINTER_README")
 fi
 
+if [[ -n "${BUILDKITE_PLUGIN_PLUGIN_LINTER_SKIP_INVALID:-}" ]] ; then
+  args+=("--env" "PLUGIN_SKIP_INVALID=$BUILDKITE_PLUGIN_PLUGIN_LINTER_SKIP_INVALID")
+fi
+
 docker run "${args[@]}" buildkite/plugin-linter:"${TAG}"

@@ -10,7 +10,7 @@ For a full list of features see the [Buildkite Plugin Linter cli tool documentat
 steps:
   - label: ":sparkles: Lint"
     plugins:
-      - plugin-linter#v3.2.0:
+      - plugin-linter#v3.3.0:
           id: my-org/my-plugin
 ```
 
@@ -20,17 +20,25 @@ If you want to run it locally on a command line, see the [Buildkite Plugin Linte
 
 ## Configuration
 
-### `id`
+### Required
+
+#### `id`
 
 The id of the plugin (e.g. `my-org/my-plugin`)
 
-### `image-version`
+### Optional
+
+#### `image-version`
 
 The docker tag of the `buildkite/plugin-linter` image to use. Default is `2.0.3`
 
-### `readme` (optional)
+#### `readme`
 
-The filename of the plugin’s readme. Default is `README.md`
+The filename of the plugin’s readme to lint examples on. Default is `README.md`
+
+#### `skip-invalid` (boolean)
+
+Whether invalid examples (for example with invalid options) should not cause the linting to fail. Defaults to false.
 
 ## Developing
 
