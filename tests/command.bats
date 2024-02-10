@@ -48,6 +48,22 @@ setup() {
   unstub docker
 }
 
+
+@test "Supports the skip-invalid option" {
+  export BUILDKITE_PLUGIN_PLUGIN_LINTER_SKIP_INVALID=true
+
+  stub docker \
+    "pull buildkite/plugin-linter:latest : echo pulled image" \
+    "run -it --rm --volume /plugin:/plugin:ro --env PLUGIN_ID=my-plugin --env PLUGIN_SKIP_INVALID=true buildkite/plugin-linter:latest : echo linted"
+
+  run "$PWD"/hooks/command
+
+  assert_success
+  assert_output --partial "pulled image"
+  assert_output --partial "linted"
+  unstub docker
+}
+
 @test "Support not specifying a tag" {
   unset BUILDKITE_PLUGIN_PLUGIN_LINTER_IMAGE_VERSION
 
