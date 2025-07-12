@@ -11,7 +11,7 @@ steps:
 
   - label: ":bash: Tests"
     plugins:
-      - plugin-tester#v1.1.1: ~
+      - plugin-tester#v1.2.0: ~
 
   - wait
   
