@@ -12,9 +12,10 @@ steps:
     plugins:
       - plugin-linter#v4.0.0:
           id: my-org/my-plugin
+          image-version: v3.2.0
 ```
 
-This pulls the `buildkite/plugin-linter:v3.1.0` image by default.
+This explicitly selects the `buildkite/plugin-linter:v3.2.0` image, including when using an older plugin release.
 
 If you want to run it locally on a command line, see the [Buildkite Plugin Linter cli tool documentation](https://github.com/buildkite-plugins/buildkite-plugin-linter).
 
@@ -30,7 +31,7 @@ The id of the plugin (e.g. `my-org/my-plugin`)
 
 #### `image-version`
 
-The Docker tag of the `buildkite/plugin-linter` image to use. Default is `v3.1.0`.
+The Docker tag of the `buildkite/plugin-linter` image to use. Default is `v3.2.0`.
 
 #### `readme`
 

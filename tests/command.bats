@@ -68,8 +68,8 @@ setup() {
   unset BUILDKITE_PLUGIN_PLUGIN_LINTER_IMAGE_VERSION
 
   stub docker \
-    "pull buildkite/plugin-linter:v3.1.0 : echo pulled image" \
-    "run -it --rm --volume /plugin:/plugin:ro --env PLUGIN_ID=my-plugin buildkite/plugin-linter:v3.1.0 : echo linted"
+    "pull buildkite/plugin-linter:v3.2.0 : echo pulled image" \
+    "run -it --rm --volume /plugin:/plugin:ro --env PLUGIN_ID=my-plugin buildkite/plugin-linter:v3.2.0 : echo linted"
 
   run "$PWD"/hooks/command
 
