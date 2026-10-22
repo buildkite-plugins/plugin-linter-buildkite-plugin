@@ -10,7 +10,7 @@ For a full list of features see the [Buildkite Plugin Linter cli tool documentat
 steps:
   - label: ":sparkles: Lint"
     plugins:
-      - plugin-linter#v4.0.0:
+      - plugin-linter#v4.1.0:
           id: my-org/my-plugin
           image-version: v3.2.0
 ```
@@ -51,7 +51,7 @@ To keep using the previous linter behavior while upgrading the wrapper, set the 
 steps:
   - label: ":sparkles: Lint"
     plugins:
-      - plugin-linter#v4.0.0:
+      - plugin-linter#v4.1.0:
           id: my-org/my-plugin
           image-version: v2.1.0
 ```
