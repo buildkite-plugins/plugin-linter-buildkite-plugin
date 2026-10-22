@@ -12,7 +12,7 @@ steps:
 
   - label: ":bash: Tests"
     plugins:
-      - plugin-tester#v1.4.0: ~
+      - plugin-tester#v2.0.0: ~
 
   - label: "Security Scan"
     key: security_scan
